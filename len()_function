@@ -1,0 +1,20 @@
+#  problem check word.empty.paragraphs.sentences.
+def string_type(string):
+    if "\n" in string:
+        return "page"
+    elif string.count(".")>1 and " " in string:
+        return "Paragraph"
+    elif " " in string:
+        return "sentence"
+    elif len(string)==0:
+        return "empty"
+    elif len(string)==1:
+        return "character"
+    else:
+        return "word"
+print(string_type(""))
+print(string_type("!"))
+print(string_type("cs1301"))
+print(string_type("This is too many cases!"))
+print(string_type("There's way too many ostrocjes. why are there so many ostriches.The brochure said there'd only be afew ostriches."))
+print(string_type("Paragraphs needto hane mutiple sentences.It's true.\nHowever,twp is enough.Yes, twp sentences can make a paragraph."))
