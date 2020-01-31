@@ -1,0 +1,105 @@
+def valid_char(character):
+    return 33 <= ord(character) <= 255
+
+def valid_char(string):
+    return 97>= ord(string)<=255
+print(valid_char("a"))
+print(valid_char(" "))
+print(valid_char("!"))
+print(valid_char("☺"))
+
+
+def third_char(char):
+    if len(char) > 2:
+       return char[2]
+    else:
+       return "Too short"
+
+print(third_char("mujdgf"))
+print(third_char("mohdghd"))
+print(third_char("zb"))
+
+string="123456"
+def num_changer(string):
+    count=len(string)
+    print(count)
+    even=string[0:count:2]
+    print(even)
+    odd=string[1:count:2]
+    print(odd)
+    return int(even) + int(odd)
+
+ad=num_changer(string)
+print(ad)
+
+char="278941"
+def n_chng(char):
+
+    even=char[0::2]
+    print(even)
+    odd=char[1::2]
+    print(odd)
+    return int(even) + int(odd)
+
+result =n_chng(char)
+print(result)
+
+
+def char_chng(string):
+    even=string[0::2]
+    print(even)
+    odd=string[1::2]
+    print(odd)
+    return int(even) + int(odd)
+string="456789"
+result=char_chng(string)
+print(result)
+
+x="1432567"
+def a_ch(x):
+    even=x[1::2]
+    print(even)
+    odd=x[0::2]
+    print(odd)
+    return int(even) + int(odd)
+result=a_ch(x)
+print(result)
+
+
+def num_changer(digits):
+    even_digits=digits[0::2]
+    odd_digits=digits[1::2]
+    return int(even_digits) + int(odd_digits)
+
+string="123456"
+result=num_changer(string)
+print(string + " ->" + str(result))
+
+def n_changer(char):
+    even_char=""
+    odd_char=""
+
+    for i in range(0, len(char)):
+      if i % 2==0:
+        even_char +=char[i]
+      else:
+         odd_char += char[i]
+    return  int(even_char) + int(odd_char)
+string="12345"
+result=n_changer(string)
+print(string + "->" + str(result))
+
+def change(string):
+
+    even=""
+    odd=""
+    for i in range(0, len(string)):
+        if i % 2==0:
+            even +=string[i]
+        else:
+            odd +=string[i]
+    return int(even) + int(odd)
+
+char="456789"
+result=change(char)
+print(char +"->" + str(result))
